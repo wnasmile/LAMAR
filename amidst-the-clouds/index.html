@@ -16,54 +16,53 @@
     <script src="/js/main.js"></script>
     <!-- Set the background colour of the document -->
     <style>
-      body {
-        background: #000000;
-        color: #cccccc;
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
-      }
-      canvas {
-        image-rendering: optimizeSpeed;
-        -webkit-interpolation-mode: nearest-neighbor;
-        -ms-touch-action: none;
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
-      }
-      :-webkit-full-screen #canvas {
-        width: 100%;
-        height: 100%;
-      }
-      div.gm4html5_div_class {
-        margin: 0px;
-        padding: 0px;
-        border: 0px;
-      }
-      /* START - Login Dialog Box */
-      div.gm4html5_login {
-        padding: 20px;
-        position: absolute;
-        border: solid 2px #000000;
-        background-color: #404040;
-        color: #00ff00;
-        border-radius: 15px;
-        box-shadow: #101010 20px 20px 40px;
-      }
-      div.gm4html5_cancel_button {
-        float: right;
-      }
-      div.gm4html5_login_button {
-        float: left;
-      }
-      div.gm4html5_login_header {
-        text-align: center;
-      }
-      /* END - Login Dialog Box */
-      :-webkit-full-screen {
-        width: 100%;
-        height: 100%;
-      }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
+  }
+
+  body {
+    color: #ccc;
+  }
+
+  canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 100vh;
+    width: auto;
+    aspect-ratio: 1 / 1;
+
+    transform: translate(-50%, -50%);
+
+    image-rendering: optimizeSpeed;
+    image-rendering: pixelated;
+    -ms-touch-action: none;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  /* Ensure container doesn't interfere */
+  .gm4html5_div_class {
+    width: 100%;
+    height: 100%;
+  }
+
+  :-webkit-full-screen canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  :-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+  }
     </style>
   </head>
 
