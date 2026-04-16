@@ -7,7 +7,7 @@
   </head>
   <body>
     <script src="/js/main.js"></script>
-    <div id="ruffle" width="100%" height="100%"></div>
+    <div id="ruffle" width="100vw" height="100vh" style="position:absolute;"></div>
     <script src="ruffle.js"></script>
     <script>
       window.RufflePlayer = window.RufflePlayer || {};
@@ -16,8 +16,8 @@
         const player = ruffle.createPlayer();
         const container = document.getElementById("ruffle");
         player.id = "player";
-        player.style.width = "100%";
-        player.style.height = "100%";
+        player.style.width = "100vw";
+        player.style.height = "100vh";
         container.appendChild(player);
         player.load("black_knight.swf");
       });
