@@ -99,24 +99,33 @@
 </body>
 <script src="UnityLoader.js"></script>
 <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "EarnToDie.json", {onProgress: UnityProgress});
+  var gameInstance = UnityLoader.instantiate("gameContainer", "EarnToDie.json", {
+    onProgress: UnityProgress
+  });
+
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
     }
+
     const loader = document.querySelector("#loader");
+
     if (!gameInstance.progress) {
-      const progress = document.querySelector("#loader .progress");
-      progress.style.display = "block";
-      gameInstance.progress = progress.querySelector(".full");
+      const progressBar = document.querySelector("#loader .progress"); // renamed
+      progressBar.style.display = "block";
+
+      gameInstance.progress = progressBar.querySelector(".full");
       loader.querySelector(".spinner").style.display = "none";
     }
+
+    // progress is now still the numeric value (0 → 1)
     gameInstance.progress.style.transform = `scaleX(${progress})`;
+
     if (progress === 1 && !gameInstance.removeTimeout) {
-      gameInstance.removeTimeout = setTimeout(function() {
-          loader.style.display = "none";
+      gameInstance.removeTimeout = setTimeout(function () {
+        loader.style.display = "none";
       }, 2000);
     }
   }
-  </script>
+        </script>
 </html>
