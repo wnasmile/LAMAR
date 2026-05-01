@@ -10,6 +10,25 @@
     <script>
       UnityLoader.instantiate("unityContainer", "Build/TinyIslands_RuleTweak_v14.json");
     </script>
+    <style>
+      /* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* no scrollbars */
+  background: #000;
+}
+
+/* Force Unity container fullscreen */
+#unityContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+    </style>
   </head>
   <body>
     <div id="unityContainer" style="width: 960px; height: 540px; margin: auto;"></div>
