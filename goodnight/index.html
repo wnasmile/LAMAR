@@ -9,48 +9,48 @@
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="/js/main.js"></script>
+    <script>
+      window.addEventListener('load', function() {
+        alert('Controls: X to jump, Z to chill, arrow keys to move, ENTER to start/pause.');
+      });
+    </script>
     <style>
-      /* Reset default spacing */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-/* Full-page layout */
-html, body {
-  height: 100%;
-}
+      html, body {
+        height: 100%;
+      }
 
-/* Center everything */
-body {
-  display: flex;
-  flex-direction: column;        /* stack text + canvas */
-  justify-content: center;       /* vertical center */
-  align-items: center;           /* horizontal center */
-  background-color: #000;        /* optional: dark background */
-  color: #fff;                  /* optional: text color */
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 10px;
-}
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
 
-/* Style the instructions text */
-body {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Ensure canvas is centered and behaves */
-canvas {
-  display: block;
-  margin: 10px auto;             /* spacing from text */
-  max-width: 100%;               /* responsive */
-  height: auto;
-}
+      canvas {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        width: auto;
+        margin: 0;
+      }
     </style>
   </head>
   <body>
-    Controls: X to jump, Z to chill, arrow keys to move, ENTER to start/pause.
   </body>
 </html>
