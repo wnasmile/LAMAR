@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Unity WebGL Player | Tiny Islands</title>
+    <title>Tiny Islands</title>
     <script src="Build/UnityLoader.js"></script>
     <script src="/js/main.js"></script>
     <link rel="icon" href="/favicon.ico">
@@ -11,26 +11,24 @@
       UnityLoader.instantiate("unityContainer", "Build/TinyIslands_RuleTweak_v14.json");
     </script>
     <style>
-      /* Reset */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* no scrollbars */
+  overflow: hidden;
   background: #000;
 }
 
-/* Force Unity container fullscreen */
 #unityContainer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100vw;
+  height: 100vh;
 }
     </style>
   </head>
   <body>
-    <div id="unityContainer" style="width: 960px; height: 540px; margin: auto;"></div>
+    <div id="unityContainer"></div>
   </body>
 </html>
